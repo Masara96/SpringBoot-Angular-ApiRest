@@ -1,5 +1,6 @@
 package com.programa.springboot.backend.apirest;
 
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,13 +15,13 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerCofig {
          
 	@Bean
-	public Docket api() {
-		return new Docket(DocumentationType.SWAGGER_2)
-		.select().apis(RequestHandlerSelectors
-				.basePackage("com.programa.springboot.backend.apirest.controllers"))
-		.paths(PathSelectors.any())
-		.build();
-	}
-	
-	
+    public Docket api() {
+                return new Docket(DocumentationType.SWAGGER_2)
+                            .select()
+                            .apis(
+                                    RequestHandlerSelectors
+                                    .basePackage("com.programa.springboot.backend.apirest.controllers"))
+                            .paths(PathSelectors.any())
+                            .build();
+        }
 }
